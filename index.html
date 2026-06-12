@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Физика әлемі — Онлайн Курс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PhysicsCourse</h1>
+            <p>Физиканы бізбен бірге оңай әрі қызықты үйрен!</p>
+        </div>
+    </header>
+    <main class="container">
+        <section class="sections-nav">
+            <h2>Курс бағдарламасы</h2>
+            <div class="nav-buttons">
+                <button class="nav-btn active" onclick="showTopic('mechanics')">1. Механика</button>
+                <button class="nav-btn" onclick="showTopic('thermo')">2. Термодинамика</button>
+                <button class="nav-btn" onclick="showTopic('electro')">3. Электродинамика</button>
+                <button class="nav-btn" onclick="showTopic('quantum')">4. Кванттық физика</button>
+            </div>
+        </section>
+        <section class="course-content">
+            <div id="mechanics" class="topic-content active">
+                <h2>1-бөлім: Механика негіздері</h2>
+                <p>Бұл бөлімде біз денелердің қозғалысын, Ньютон заңдарын және энергияның сақталу заңдарын қарастырамыз.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/v9S_d8p9eug" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="quiz-container">
+                    <h3>Өз-өзіңді тексер (Тапсырма):</h3>
+                    <p>Қандай да бір сыртқы күш әсер етпегенше, дене өз қозғалысын немесе тыныштық күйін сақтайды. Бұл Ньютонның нешінші заңы?</p>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">1-ші заңы</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false)">2-ші заңы</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false)">3-ші заңы</button>
+                    <p class="feedback"></p>
+                </div>
+            </div>
+            <div id="thermo" class="topic-content">
+                <h2>2-бөлім: Термодинамика және молекулалық физика</h2>
+                <p>Жылу құбылыстары, идеал газ күйінің теңдеуі және термодинамиканың заңдарымен танысыңыз.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/4b_vR_Mka7M" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="quiz-container">
+                    <h3>Өз-өзіңді тексер (Тапсырма):</h3>
+                    <p>Идеал газ күйінің теңдеуін көрсетіңіз:</p>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">PV = nRT</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false)">P = F/S</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false)">E = mc²</button>
+                    <p class="feedback"></p>
+                </div>
+            </div>
+            <div id="electro" class="topic-content">
+                <h2>3-бөлім: Электродинамика</h2>
+                <p>Электр тогы, магнит өрісі, Ом заңы және тізбектердің қосылу түрлерін оқу.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/3fy4fepfLwU" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="quiz-container">
+                    <h3>Өз-өзіңді тексер (Тапсырма):</h3>
+                    <p>Тізбек бөлігі үшін Ом заңының формуласы қандай?</p>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false)">I = q/t</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">I = U/R</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false)">A = Fs</button>
+                    <p class="feedback"></p>
+                </div>
+            </div>
+            <div id="quantum" class="topic-content">
+                <h2>4-бөлім: Кванттық және атомдық физика</h2>
+                <p>Жарық кванттары, фотоэффект құбылысы және атомның құрылымы туралы заманауи түсініктер.</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/5U7O0CkiA40" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="quiz-container">
+                    <h3>Өз-өзіңді тексер (Тапсырма):</h3>
+                    <p>Жарық бөлшектері (кванттары) қалай аталады?</p>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false)">Электрон</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false)">Протон</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">Фотон</button>
+                    <p class="feedback"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Онлайн Физика Курсы. Барлық құқықтар қорғалған.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
