@@ -1,0 +1,37 @@
+function showTopic(topicId) {
+    const contents = document.querySelectorAll('.topic-content');
+    contents.forEach(content => content.classList.remove('active'));
+
+    const buttons = document.querySelectorAll('.nav-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(topicId).classList.add('active');
+    event.currentTarget.classList.add('active');
+}
+
+function checkAnswer(button, isCorrect) {
+    const container = button.parentElement;
+    const feedback = container.querySelector('.feedback');
+    const allButtons = container.querySelectorAll('.quiz-btn');
+
+    allButtons.forEach(btn => btn.style.pointerEvents = 'none');
+
+    if (isCorrect) {
+        button.style.backgroundColor = '#d4edda';
+        button.style.borderColor = '#28a745';
+        feedback.textContent = "Дұрыс! Жарайсыз! 🎉";
+        feedback.style.color = "#28a745";
+    } else {
+        button.style.backgroundColor = '#f8d7da';
+        button.style.borderColor = '#dc3545';
+        feedback.textContent = "Қате. Қайтадан ойланып көріңіз.";
+        feedback.style.color = "#dc3545";
+        
+        setTimeout(() => {
+            allButtons.forEach(btn => btn.style.pointerEvents = 'auto');
+            button.style.backgroundColor = 'white';
+            button.style.borderColor = '#e1e8ed';
+            feedback.textContent = "";
+        }, 2000);
+    }
+}
